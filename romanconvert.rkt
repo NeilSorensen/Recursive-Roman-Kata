@@ -9,6 +9,8 @@
                                (cons 1000 #\M)))
 
 (define (convert-to-roman value)
-  "")
+  (if (zero? value)
+  ""
+  "I"))
 
 (provide convert-to-roman)
