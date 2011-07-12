@@ -11,12 +11,14 @@
 (define (convert-to-roman value)
   (if (zero? value)
   ""
-  (list->string (convert-to-roman-rec value))))
+  (list->string (convert-to-roman-rec value (reverse roman-primitives)))))
 
-(define (convert-to-roman-rec value)
+(define (convert-to-roman-rec value romans)
   (if (zero? value)
       '()
-      (append (list #\I) (convert-to-roman-rec (- value 1)))
-      ))
+      (if (>= value (car (car romans)))
+          (append (list (cdr (car romans)))
+                  (convert-to-roman-rec (- value (car (car romans))) romans))
+          (convert-to-roman-rec value (cdr romans)))))
 
 (provide convert-to-roman)
