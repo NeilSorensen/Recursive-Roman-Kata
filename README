@@ -1,0 +1,8 @@
+This repository represents a code kata for a solution to the Roman Numeral Conversion problem in Scheme.
+Each commit represents a distinct step in the kata--usually either a broken test or the code that fixes that test.
+
+Notes regarding conversion:
+	When subtracting (IV is 1 less than V), the converter always uses the largest possible power of 10
+	No attempt is made to deal with fractional numbers
+	0 is represented by the empty string, rather than using a special character.
+	The characters presented come from the Wikipedia article on Roman numerals (http://en.wikipedia.org/wiki/Roman_numerals) on 7/11/2011 (M/D/Y).
