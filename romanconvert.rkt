@@ -11,7 +11,7 @@
                                (cons 100 #\C)
                                (cons 400 (list #\C #\D))
                                (cons 500 #\D)
-                               (cons 900 (list #\X #\M))
+                               (cons 900 (list #\C #\M))
                                (cons 1000 #\M)))
 
 (define (convert-to-roman value)
