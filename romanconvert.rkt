@@ -11,6 +11,12 @@
 (define (convert-to-roman value)
   (if (zero? value)
   ""
-  "I"))
+  (list->string (convert-to-roman-rec value))))
+
+(define (convert-to-roman-rec value)
+  (if (zero? value)
+      '()
+      (append (list #\I) (convert-to-roman-rec (- value 1)))
+      ))
 
 (provide convert-to-roman)
